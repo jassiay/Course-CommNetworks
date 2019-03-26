@@ -52,7 +52,7 @@ if __name__ == '__main__':
     
     t1 = datetime.now()
     # scan for reserved ports
-    for i in range(start, end):
+    for i in range(start, end+1):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(0.5)
         result = s.connect_ex((targetIP, i))
